@@ -9,7 +9,7 @@
 ASGameState::ASGameState()
 {
 	/* 1 SECOND real time is 1*TimeScale MINUTES game time */
-	TimeScale = 10.0f;
+	TimeScale = 2.0f;
 	bIsNight = false;
 
 	SunriseTimeMark = 6.0f;
@@ -146,7 +146,7 @@ void ASGameState::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifet
 {
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
 
-	DOREPLIFETIME(ASGameState, ElapsedGameMinutes);
-	DOREPLIFETIME(ASGameState, bIsNight);
-	DOREPLIFETIME(ASGameState, TotalScore);
+	// DOREPLIFETIME(ASGameState, ElapsedGameMinutes);
+	// DOREPLIFETIME(ASGameState, bIsNight);
+	// DOREPLIFETIME(ASGameState, TotalScore);
 }
